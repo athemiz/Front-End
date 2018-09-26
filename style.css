@@ -88,6 +88,8 @@
 		width:12.245%; 
 		height:30px;
 		text-align: center;
+		white-space: nowrap;
+    	overflow: hidden;
 	}
 
 	div.dia-mes{
@@ -102,6 +104,8 @@
 		align-items: center;
 		justify-content: center;
 		background-color:#eeeeee;
+		white-space: nowrap;
+    	overflow: hidden;
 	}
 	div.dia-semana{
 		border-style: solid;
@@ -115,10 +119,13 @@
 		align-items: center;
 		justify-content: center;
 		background-color:#eeeeee;
+		white-space: nowrap;
+    	overflow: hidden;
 	}
 
 	div.dias-semana{
 
 	}
+
 }
 
