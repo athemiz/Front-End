@@ -20,5 +20,10 @@
   "homepage": "https://github.com/athemiz/TaskCalendar#readme",
   "devDependencies": {
     "lite-server": "^2.4.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.14.3"
   }
 }
