@@ -27,22 +27,22 @@
 				</div>
 
 				<div class='col'>
-						<div class='teste2'>
+						<div class='botoes'>
 							<button id='btn3' type='button' class='btn btn-danger' onclick="">+ Novo Evento</button>
 						</div>
 
-						<div class='teste2'>
+						<div class='botoes'>
 							<button id='btn2' type='button' class='btn btn-default' onclick="nextMonth()">></button>
 						</div>
 
-						<div class='dropdown teste2'>
+						<div class='dropdown botoes'>
 							 <button id='btn1' class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Mensal</button>
 						 	<ul class="dropdown-menu">
-						    	<li><a href="#">Semanal</a></li>
-						    	<li><a href="#">Mensal</a></li>
+						    	<li><a href="#" onclick="firstWeek()">Semanal</a></li>
+						    	<li><a href="#" onclick="currentMonth()">Mensal</a></li>
 						 	</ul>
 						</div>
-						<div class='teste2'>
+						<div class='botoes'>
 							<button id='btn4' type='button' class='btn btn-default' onclick="previousMonth()"><</button>
 						</div>
 				</div>
@@ -51,134 +51,137 @@
 
 			<div class='row dias rounded-top'>
 				
-				<div class='col-auto teste4 rounded-left'>
+				<div class='vazio'>
+					
+				</div>
+				<div class='col-auto dia rounded-left'>
 					<span class='align-middle'>Domingo</span>
 				</div>
-				<div class='col-auto teste4'>
+				<div class='col-auto dia'>
 					Segunda
 				</div>
-				<div class='col-auto teste4'>
+				<div class='col-auto dia'>
 					Terça
 				</div>
-				<div class='col-auto teste4'>
+				<div class='col-auto dia'>
 					Quarta
 				</div>
-				<div class='col-auto teste4'>
+				<div class='col-auto dia'>
 					Quinta
 				</div>
-				<div class='col-auto teste4'>
+				<div class='col-auto dia'>
 					Sexta
 				</div>
-				<div class='col-auto teste4 rounded-right'>
+				<div class='col-auto dia rounded-right'>
 					Sabado
 				</div>
 			</div>
 
 			<div class='row' id='calendar'>
 				<!-- 
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-semana'>
 					1
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-semana'>
 					2
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-semana'>
 					3
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-semana'>
 					4
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-semana'>
 					5
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-semana'>
 					6
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-semana'>
 					7
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					8
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					9
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					10
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					11
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					12
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					13
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					14
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					15
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					16
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					17
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					18
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					19
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					20
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					21
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					22
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					23
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					24
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					25
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					26
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					27
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					28
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					29
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					30
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					31
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					1
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					2
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					3
 				</div>
-				<div class='col-auto teste3'>
+				<div class='col-auto lista-mes'>
 					4
 				</div>
 				-->
@@ -193,6 +196,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="responsive.js"></script>
+    <script src="calendarView.js"></script>
 
 	</html>
