@@ -22,17 +22,17 @@
 			<div class='row align-items-end nav'>
 
 				<div class='col-auto'>
-					<b style='font-size: 25px'>Setembro </b>
-					<span style='font-size: 25px'>2018</span>
+					<b style='font-size: 25px' id="mes">Setembro </b>
+					<span style='font-size: 25px' id="ano">2018</span>
 				</div>
 
 				<div class='col'>
 						<div class='teste2'>
-							<button id='btn3' type='button' class='btn btn-danger'>+ Novo Evento</button>
+							<button id='btn3' type='button' class='btn btn-danger' onclick="">+ Novo Evento</button>
 						</div>
 
 						<div class='teste2'>
-							<button id='btn2' type='button' class='btn btn-default'>></button>
+							<button id='btn2' type='button' class='btn btn-default' onclick="nextMonth()">></button>
 						</div>
 
 						<div class='dropdown teste2'>
@@ -43,7 +43,7 @@
 						 	</ul>
 						</div>
 						<div class='teste2'>
-							<button id='btn4' type='button' class='btn btn-default'><</button>
+							<button id='btn4' type='button' class='btn btn-default' onclick="previousMonth()"><</button>
 						</div>
 				</div>
 				
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 
-			<div class='row'>
+			<div class='row' id='calendar'>
 				<!-- 
 				<div class='col-auto teste3'>
 					1
