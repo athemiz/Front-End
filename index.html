@@ -10,10 +10,15 @@
 	    <!-- Bootstrap CSS -->
 	    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	    <link rel="stylesheet" href="style.css">
+	    <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="css/modal.css">
+	    <link rel="stylesheet" href="css/fadein.css">
 	</head>
 
-	<body>
+	<body class="fade-in">
+		<div id="include-modal"></div>
+
+		<!-- Pagina principal -->
 		<div class='container' style='width:80%'>
 			<div class='row align-items-end nav'>
 				<div class='col-auto'>
@@ -21,16 +26,16 @@
 					<span style='font-size: 25px' id="ano">2018</span>
 				</div>
 				<div class='col botoes-container'>
-					<button id='btn4' type='button' class='btn btn-default btn-group' onclick="teste3()"><</button>
+					<button id='btn4' type='button' class='btn btn-default btn-group' onclick="anteriorMes()"><</button>
 					<div class='dropdown'>
 						<button id='btn1' class="btn btn-primary dropdown-toggle btn-group" type="button" data-toggle="dropdown">Mensal</button>
 					 		<ul class="dropdown-menu">
-					    		<li><a href="#" onclick="teste3()">Semanal</a></li>
-					    		<li><a href="#" onclick="teste()">Mensal</a></li>
+					    		<li><a href="#" onclick="primeiraSemana()">Semanal</a></li>
+					    		<li><a href="#" onclick="mesAtual()">Mensal</a></li>
 					 		</ul>
 					</div>
-					<button id='btn2' type='button' class='btn btn-default btn-group' onclick="teste2()">></button>
-					<button id='btn3' type='button' class='btn btn-danger btn-group' onclick="">+ Novo Evento</button>
+					<button id='btn2' type='button' class='btn btn-default btn-group' onclick="proximoMes()">></button>
+					<button type="button" id='btn3' class='btn btn-danger btn-group' data-toggle="modal" data-target="#myModal">+ Novo Evento</button>
 				</div>
 			</div>
 
@@ -66,13 +71,22 @@
 	</body>
 
 	<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="calendarView.js"></script>
-    <script src="taskModel.js"></script>
-    <script src="taskView.js"></script>
-    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--JS Scripts-->
+    <script src="js/calendarView.js"></script>
+    <script src="js/taskModel.js"></script>
+    <script src="js/taskView.js"></script>
+    <script src="js/modalView.js"></script>
+    <script src="js/viewController.js"></script>
+
+    <!-- Include modal.html -->
+    <script> 
+    	$(function(){$("#include-modal").load("modal.html");});
+    </script>
 
 	</html>

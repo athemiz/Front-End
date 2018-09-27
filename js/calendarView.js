@@ -17,8 +17,8 @@ function currentMonth(){
 	var mes = month=="Jan" ? "Janeiro" : ( month=="Feb" ? "Fevereiro" : ( month=="Mar" ? "Março" : ( month=="Apr" ? "Abril" : ( month=="May" ? "Maio" : ( month=="Jun" ? "Junho" : ( month=="Jul" ? "Julho" : ( month=="Aug" ? "Agosto" : ( month=="Sep" ? "Setembro" : ( month=="Oct" ? "Outubro" : ( month=="Nov" ? "Novembro" : "Dezembro" ) ) ) ) ) ) ) ) ) );
 
 	document.getElementById("btn1").innerHTML="Mensal";
-	document.getElementById("btn2").onclick = teste2;
-	document.getElementById("btn4").onclick = teste3;
+	document.getElementById("btn2").onclick = proximoMes;
+	document.getElementById("btn4").onclick = anteriorMes;
 	document.getElementById("calendar").innerHTML="";
 	document.getElementById("mes").innerHTML=mes;
 	document.getElementById("ano").innerHTML=year;
@@ -38,7 +38,7 @@ function currentMonth(){
 	}
 
 	for(var i=1; i<=42-pulos; i++){
-		if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-mes' id='"+"dia-"+i+"'>"+i+"</div>";
+		if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-mes' id='"+"dia-"+i+"'>"+"<p>"+i+"</p>"+"</div>";
 		else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-mes'></div>";
 	}
 }
@@ -68,7 +68,7 @@ function nextMonth(){
 	}
 
 	for(var i=1; i<=42-pulos; i++){
-		if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-mes' id='"+"dia-"+i+"'>"+i+"</div>";
+		if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-mes' id='"+"dia-"+i+"'>"+"<p>"+i+"</p>"+"</div>";
 		else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-mes'></div>";
 	}
 
@@ -100,7 +100,7 @@ function previousMonth(){
 	}
 
 	for(var i=1; i<=42-pulos; i++){
-		if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-mes' id='"+"dia-"+i+"'>"+i+"</div>";
+		if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-mes' id='"+"dia-"+i+"'>"+"<p>"+i+"</p>"+"</div>";
 		else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-mes'></div>";
 	}
 
@@ -121,8 +121,8 @@ function firstWeek(){
 
 	document.getElementById("mes").innerHTML=mes;
 	document.getElementById("ano").innerHTML=year;
-	document.getElementById("btn2").onclick = nextWeek;
-	document.getElementById("btn4").onclick = previousWeek;
+	document.getElementById("btn2").onclick = proximaSemana;
+	document.getElementById("btn4").onclick = anteriorSemana;
 	document.getElementById("btn1").innerHTML="Semanal";
 	document.getElementById("calendar").innerHTML="";
 
