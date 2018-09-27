@@ -1,75 +1,81 @@
-@media (min-width: 600px){
-	div.nav{
-		margin-top: 20px;
-		margin-bottom: 10px;
-	}
-
-	div.botoes{
-		margin-left: 10px;
-		display:inline;
-		float:right;
-	}
-
-	div.lista-mes{
-		border-style: solid;
-		border-color: #e5e5e5;
-		border-width: 1px;
-		width:14.28%; 
-		height:200px;
-	}
-
-	div.lista-semana{
-		border-style: solid;
-		border-color: #e5e5e5;
-		border-width: 1px;
-		width:12.245%; 
-		height:30px;
-		text-align: center;
-	}
-
-	div.dia-mes{
-		border-style: solid;
-		border-color: #e5e5e5;
-		border-width: 1px;
-		width:14.28%; 
-		height: 50px;
-		color: gray;
-		display:flex;
-		align-items: center;
-		justify-content: center;
-		background-color:#eeeeee;
-	}
-	div.dia-semana{
-		border-style: solid;
-		border-color: #e5e5e5;
-		border-width: 1px;
-		width:12.245%; 
-		height: 50px;
-		color: gray;
-		display:flex;
-		align-items: center;
-		justify-content: center;
-		background-color:#eeeeee;
-	}
-
-	div.vazio-semana{
-		width:12.245%;
-	}
+.btn-group{
+	margin-left: 10px;
 }
 
+div.nav{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	display:flex;
+}
+
+.botoes-container{
+	width:300px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+div.botoes-container{
+	width:300px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+div.lista-mes{
+	border-style: solid;
+	border-color: #e5e5e5;
+	border-width: 1px;
+	width:14.28%; 
+	height:200px;
+	display:block;
+}
+
+div.lista-semana{
+	border-style: solid;
+	border-color: #e5e5e5;
+	border-width: 1px;
+	width:12.245%; 
+	height:30px;
+	text-align: center;
+}
+
+div.dia-mes{
+	border-style: solid;
+	border-color: #e5e5e5;
+	border-width: 1px;
+	width:14.28%; 
+	height: 50px;
+	color: gray;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-color:#eeeeee;
+}
+div.dia-semana{
+	border-style: solid;
+	border-color: #e5e5e5;
+	border-width: 1px;
+	width:12.245%; 
+	height: 50px;
+	color: gray;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-color:#eeeeee;
+}
+
+div.vazio-semana{
+	width:12.245%;
+}
+
+.task{
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
 @media (max-width: 600px){
-	div.nav{
-		margin-top: 20px;
-		margin-bottom: 10px;
-		display:block;
-	}
-
-	div.botoes{
-		margin-left: 10px;
-		display:inline;
-		float:right;
-	}
-
 	div.lista-mes{
 		border-style: solid;
 		border-color: #e5e5e5;
@@ -123,8 +129,8 @@
     	overflow: hidden;
 	}
 
-	div.dias-semana{
-
+	.task{
+		display: none;	
 	}
 
 }

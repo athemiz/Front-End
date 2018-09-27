@@ -20,23 +20,17 @@
 					<b style='font-size: 25px' id="mes">Setembro </b>
 					<span style='font-size: 25px' id="ano">2018</span>
 				</div>
-				<div class='col'>
-						<div class='botoes'>
-							<button id='btn3' type='button' class='btn btn-danger' onclick="">+ Novo Evento</button>
-						</div>
-						<div class='botoes'>
-							<button id='btn2' type='button' class='btn btn-default' onclick="nextMonth()">></button>
-						</div>
-						<div class='dropdown botoes'>
-							 <button id='btn1' class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Mensal</button>
-						 	<ul class="dropdown-menu">
-						    	<li><a href="#" onclick="firstWeek()">Semanal</a></li>
-						    	<li><a href="#" onclick="currentMonth()">Mensal</a></li>
-						 	</ul>
-						</div>
-						<div class='botoes'>
-							<button id='btn4' type='button' class='btn btn-default' onclick="previousMonth()"><</button>
-						</div>
+				<div class='col botoes-container'>
+					<button id='btn4' type='button' class='btn btn-default btn-group' onclick="teste3()"><</button>
+					<div class='dropdown'>
+						<button id='btn1' class="btn btn-primary dropdown-toggle btn-group" type="button" data-toggle="dropdown">Mensal</button>
+					 		<ul class="dropdown-menu">
+					    		<li><a href="#" onclick="teste3()">Semanal</a></li>
+					    		<li><a href="#" onclick="teste()">Mensal</a></li>
+					 		</ul>
+					</div>
+					<button id='btn2' type='button' class='btn btn-default btn-group' onclick="teste2()">></button>
+					<button id='btn3' type='button' class='btn btn-danger btn-group' onclick="">+ Novo Evento</button>
 				</div>
 			</div>
 
@@ -77,5 +71,8 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="calendarView.js"></script>
+    <script src="taskModel.js"></script>
+    <script src="taskView.js"></script>
+    <script src="app.js"></script>
 
 	</html>
