@@ -35,35 +35,18 @@
 					 		</ul>
 					</div>
 					<button id='btn2' type='button' class='btn btn-default btn-group' onclick="proximoMes()">></button>
-					<button type="button" id='btn3' class='btn btn-danger btn-group' data-toggle="modal" data-target="#myModal">+ Novo Evento</button>
+					<button type="button" id='btn3' class='btn btn-danger btn-group' data-toggle="modal" data-target="#addModal">+ Novo Evento</button>
 				</div>
 			</div>
-
 			<div class='row dias rounded-top'>
-				<div class='vazio'>
-					
-				</div>
-				<div class='col-auto dia rounded-left'>
-					<span class='align-middle'>Domingo</span>
-				</div>
-				<div class='col-auto dia'>
-					Segunda
-				</div>
-				<div class='col-auto dia'>
-					Terça
-				</div>
-				<div class='col-auto dia'>
-					Quarta
-				</div>
-				<div class='col-auto dia'>
-					Quinta
-				</div>
-				<div class='col-auto dia'>
-					Sexta
-				</div>
-				<div class='col-auto dia rounded-right'>
-					Sabado
-				</div>
+				<div class='vazio'></div>
+				<div class='col-auto dia rounded-left'><span class='align-middle'>Domingo</span></div>
+				<div class='col-auto dia'>Segunda</div>
+				<div class='col-auto dia'>Terça</div>
+				<div class='col-auto dia'>Quarta</div>
+				<div class='col-auto dia'>Quinta</div>
+				<div class='col-auto dia'>Sexta</div>
+				<div class='col-auto dia rounded-right'>Sabado</div>
 			</div>
 			<div class='row' id='calendar'>
 			</div>
@@ -85,8 +68,6 @@
     <script src="js/viewController.js"></script>
 
     <!-- Include modal.html -->
-    <script> 
-    	$(function(){$("#include-modal").load("modal.html");});
-    </script>
+    <script>$(function(){$("#include-modal").load("modal.html");});</script>
 
 	</html>

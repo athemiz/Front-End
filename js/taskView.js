@@ -10,26 +10,26 @@ function loadTaskMonth(task){
 
 	if(mes_numero==task.mes_inicio && mes_numero==task.mes_fim){
 		for(var i = task.dia_inicio; i<=task.dia_fim; i++){
-			if(document.getElementById("dia-"+i)) document.getElementById("dia-"+i).innerHTML+="<div><button type='button' class='btn "+botao+" task'>"+task.evento+"</button></div>";
+			if(document.getElementById("dia-"+i)) document.getElementById("dia-"+i).innerHTML+="<div><button type='button' class='btn "+botao+" task' data-toggle='modal' data-target='#editRemoveModal'>"+task.evento+"</button></div>";
 		}
 	}
 	
 
 	else if(mes_numero==task.mes_inicio && mes_numero<task.mes_fim){
 		for(var i = task.dia_inicio; i<=31; i++){
-			if(document.getElementById("dia-"+i)) document.getElementById("dia-"+i).innerHTML+="<div><button type='button' class='btn "+botao+" task'>"+task.evento+"</button></div>";
+			if(document.getElementById("dia-"+i)) document.getElementById("dia-"+i).innerHTML+="<div><button type='button' class='btn "+botao+" task' data-toggle='modal' data-target='#editRemoveModal'>"+task.evento+"</button></div>";
 		}
 	}
 	
 
 	else if(mes_numero>task.mes_inicio && mes_numero<task.mes_fim){
 		for(var i = 1; i<=31; i++){
-			if(document.getElementById("dia-"+i)) document.getElementById("dia-"+i).innerHTML+="<div><button type='button' class='btn "+botao+" task'>"+task.evento+"</button></div>";
+			if(document.getElementById("dia-"+i)) document.getElementById("dia-"+i).innerHTML+="<div><button type='button' class='btn "+botao+" task' data-toggle='modal' data-target='#editRemoveModal'>"+task.evento+"</button></div>";
 		}
 	}
 	else if(mes_numero==task.mes_fim){
 		for(var i = 1; i<=task.dia_fim; i++){
-			if(document.getElementById("dia-"+i)) document.getElementById("dia-"+i).innerHTML+="<div><button type='button' class='btn "+botao+" task'>"+task.evento+"</button></div>";
+			if(document.getElementById("dia-"+i)) document.getElementById("dia-"+i).innerHTML+="<div><button type='button' class='btn "+botao+" task' data-toggle='modal' data-target='#editRemoveModal'>"+task.evento+"</button></div>";
 		}
 	}
 }
