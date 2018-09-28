@@ -138,12 +138,12 @@ function firstWeek(){
 
 	document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='border-style:none'></div>";
 
-	for(var i=0; i<pulos; i++){
-		document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
+	for(var i=1; i<=pulos; i++){
+		document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id=dia-"+i+"></div>";
 	}
 
 	for(var i=1; i<=7-pulos; i++){
-		if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'>"+i+"</div>";
+		if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='justify-content: center;' id=dia-"+(pulos+i)+">"+i+"</div>";
 		else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 	}
 
@@ -152,10 +152,20 @@ function firstWeek(){
 	for(var i=0; i<200; i++){
 		if(i<80){
 			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+"0"+i/8+":00"+"</div>";
+			else if(i%8>pulos) {
+				var element=document.getElementById("dia-"+(i%8));
+				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
+				else "<div class='col-auto lista-semana'></div>";
+			}
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 		else{
 			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+i/8+":00"+"</div>";
+			else if(i%8>pulos) {
+				var element=document.getElementById("dia-"+(i%8));
+				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
+				else "<div class='col-auto lista-semana'></div>";
+			}
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 	}
@@ -198,13 +208,15 @@ function nextWeek(){
 		}
 
 		for(var i=weekday+1; i<weekday+8-pulos; i++){
-			if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'>"+i+"</div>";
+			if(i<=end && !reset) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='justify-content: center;' id=dia-"+(i-weekday)+">"+i+"</div>";
+			else if(i<=end && reset) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='justify-content: center;'  id=dia-"+(pulos+i-weekday)+">"+i+"</div>";
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 	}
 	else{
 		for(var i=weekday+1; i<weekday+8; i++){
-			if(i<=end) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'>"+i+"</div>";
+			if(i<=end && !reset) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='justify-content: center;' id=dia-"+(i-weekday)+">"+i+"</div>";
+			else if(i<=end && reset) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='justify-content: center;' id=dia-"+(pulos+i-weekday)+">"+i+"</div>";
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 	}
@@ -220,10 +232,20 @@ function nextWeek(){
 	for(var i=0; i<200; i++){
 		if(i<80){
 			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+"0"+i/8+":00"+"</div>";
+			else if(i%8>0) {
+				var element=document.getElementById("dia-"+(i%8));
+				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
+				else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
+			}
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 		else{
 			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+i/8+":00"+"</div>";
+			else if(i%8>0) {
+				var element=document.getElementById("dia-"+(i%8));
+				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
+				else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
+			}
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 	}
@@ -283,7 +305,7 @@ function previousWeek(){
 
 	if(weekday==end){
 		for(var i=weekday-(7-pulos)+1; i<=weekday; i++){
-			document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'>"+i+"</div>";
+			document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='justify-content: center;' id=dia-"+(i-(weekday-(7-pulos)))+">"+i+"</div>";
 		}
 
 		for(var i=0; i<pulos; i++){
@@ -293,20 +315,29 @@ function previousWeek(){
 
 	else{
 		for(var i=weekday-6; i<=weekday; i++){
-			if(i<=end && i>0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'>"+i+"</div>";
+			if(i<=end && i>0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='justify-content: center;' id=dia-"+(i+7-weekday)+">"+i+"</div>";
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 	}
 
-
 	for(var i=0; i<200; i++){
 		if(i<80){
 			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+"0"+i/8+":00"+"</div>";
+			else if(i%8>0) {
+				var element=document.getElementById("dia-"+(i%8));
+				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
+				else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
+			}
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 
 		else{
 			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+i/8+":00"+"</div>";
+			else if(i%8>0) {
+				var element=document.getElementById("dia-"+(i%8));
+				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
+				else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
+			}
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 	}
