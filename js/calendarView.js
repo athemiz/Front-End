@@ -151,7 +151,7 @@ function firstWeek(){
 
 	for(var i=0; i<200; i++){
 		if(i<80){
-			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+"0"+i/8+":00"+"</div>";
+			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray; justify-content: center;'>"+"0"+i/8+":00"+"</div>";
 			else if(i%8>pulos) {
 				var element=document.getElementById("dia-"+(i%8));
 				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
@@ -160,7 +160,7 @@ function firstWeek(){
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 		else{
-			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+i/8+":00"+"</div>";
+			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray; justify-content: center;'>"+i/8+":00"+"</div>";
 			else if(i%8>pulos) {
 				var element=document.getElementById("dia-"+(i%8));
 				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
@@ -231,7 +231,7 @@ function nextWeek(){
 
 	for(var i=0; i<200; i++){
 		if(i<80){
-			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+"0"+i/8+":00"+"</div>";
+			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray; justify-content: center;'>"+"0"+i/8+":00"+"</div>";
 			else if(i%8>0) {
 				var element=document.getElementById("dia-"+(i%8));
 				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
@@ -240,7 +240,7 @@ function nextWeek(){
 			else document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana'></div>";
 		}
 		else{
-			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+i/8+":00"+"</div>";
+			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray; justify-content: center;'>"+i/8+":00"+"</div>";
 			else if(i%8>0) {
 				var element=document.getElementById("dia-"+(i%8));
 				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
@@ -322,7 +322,7 @@ function previousWeek(){
 
 	for(var i=0; i<200; i++){
 		if(i<80){
-			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+"0"+i/8+":00"+"</div>";
+			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray; justify-content: center;'>"+"0"+i/8+":00"+"</div>";
 			else if(i%8>0) {
 				var element=document.getElementById("dia-"+(i%8));
 				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
@@ -332,7 +332,7 @@ function previousWeek(){
 		}
 
 		else{
-			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray;'>"+i/8+":00"+"</div>";
+			if(i%8==0) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' style='color: gray; justify-content: center;'>"+i/8+":00"+"</div>";
 			else if(i%8>0) {
 				var element=document.getElementById("dia-"+(i%8));
 				if(element) document.getElementById("calendar").innerHTML+="<div class='col-auto lista-semana' id='"+element.innerHTML+"-"+parseInt(i/8)+"'></div>";
