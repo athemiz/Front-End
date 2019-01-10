@@ -6,4 +6,4 @@
 PS:
 Tarefas apenas dentro do mesmo ano
 
-[![Visao Mensal](https://github.com/athemiz/Front-End/TaskCalendar/img/blob/master/img_1.png?raw=true)]
+![Visao Mensal](https://github.com/athemiz/Front-End/TaskCalendar/img/blob/master/img_1.png?raw=true)
