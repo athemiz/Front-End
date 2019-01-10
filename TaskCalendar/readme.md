@@ -7,3 +7,5 @@ PS:
 Tarefas apenas dentro do mesmo ano
 
 ![Visao Mensal](https://raw.githubusercontent.com/athemiz/Front-End/master/TaskCalendar/img/img_1.png "Visao Mensal")
+![Adicionar Evento](https://raw.githubusercontent.com/athemiz/Front-End/master/TaskCalendar/img/img_2.jpg "Adicionar Evento")
+![Visao Semanal](https://raw.githubusercontent.com/athemiz/Front-End/master/TaskCalendar/img/img_3.jng "Visao Semanal")
